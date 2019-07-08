@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  nil:
+    container_name: nil
+    restart: always
+    build: 
+      context: .
+    env_file:
+      - ./.env
+    depends_on:
+      - postgres
+      - redis
+    network_mode: 'host'
+  postgres:
+    container_name: postgres
+    image: 'postgres:10-alpine'
+    restart: always
+    ports:
+      - '5432:5432'
+    env_file:
+      - ./.env
+    volumes: 
+      - ./data/postgres:/var/lib/postgresql/data
+  redis:
+    image: 'redis:alpine'
+    volumes:
+      - ./data/redis:/redis/data

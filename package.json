@@ -1,0 +1,31 @@
+{
+  "name": "nil",
+  "license": "MIT",
+  "scripts": {
+    "serve": "cross-env NODE_ENV=production node src/index.js",
+    "serve:dev": "cross-env NODE_ENV=development yarn nodemon",
+    "db:migrate": "yarn sequelize db:migrate"
+  },
+  "devDependencies": {
+    "eslint": "^5.15.3",
+    "nodemon": "^1.19.1",
+    "sequelize-cli": "^5.4.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bottleneck": "^2.18.1",
+    "canvas": "^2.5.0",
+    "canvas-constructor": "^3.0.1",
+    "cross-env": "^5.2.0",
+    "discord-akairo": "github:1computer1/discord-akairo",
+    "discord.js": "github:discordjs/discord.js",
+    "dotenv": "^7.0.0",
+    "fs-nextra": "^0.4.5",
+    "pg": "^7.10.0",
+    "sequelize": "^5.7.0",
+    "winston": "^3.2.1"
+  },
+  "engines": {
+    "node": ">= 10.0.0"
+  }
+}
